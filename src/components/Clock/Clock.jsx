@@ -4,24 +4,37 @@ import React, { Component } from "react";
 export default class Clock extends Component{
     constructor(props){
         super(props);
-        this.state = {date: new Date()};
+        this.state = {
+            date: '',
+            commit: 'What time is it? '
+        };
     }
     componentDidMount(){
-        this.timerID = setInterval(
-            () => this.tick(),
-            1000
-        );
+       
+        setInterval(() => this.time(), 3000);
+        setInterval(() => this.nowTime(), 3000);
     }
     componentWillUnmout(){
         clearInterval(this.timerID);
     }
+    nowTime(){
+        this.timerID = setInterval(() => this.tick(), 1000);
+    }
     tick(){
         this.setState({
-            date: new Date()
+            date: new Date().toLocaleTimeString()    
         })
     }
+    time(){
+        this.setState({ commit: "Time " });
+    }
     render(){
-        return <div><h2>{ this.state.date.toLocaleTimeString() }</h2></div>;
+        return <div>
+            <h2>
+              {this.state.commit} -  {this.state.date}
+            </h2>
+           
+          </div>;
     }
 };
 

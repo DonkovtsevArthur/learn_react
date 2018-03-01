@@ -9,7 +9,7 @@ export default class Add extends Component {
         return <div>
             <App name="Arthur" />
             <App name="Nasty" />
-            <Clock date={new Date()} />
+            <Clock  />
           </div>;
     }
 
