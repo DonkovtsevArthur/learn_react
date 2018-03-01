@@ -6,13 +6,12 @@ import Clock from "../Clock/Clock.jsx";
 
 export default class Add extends Component {
     render(){
-        return (
-            <div>
-                <App name="Arthur" />
-                <App name="Nasty" />
-                <Clock />
-            </div>
-        )
+        return <div>
+            <App name="Arthur" />
+            <App name="Nasty" />
+            <Clock date={new Date()} />
+          </div>;
     }
 
 } 
+
