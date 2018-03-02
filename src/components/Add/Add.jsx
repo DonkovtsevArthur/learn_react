@@ -1,17 +1,19 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+
 import "./Add.css";
 import App from "../App/App";
 import Clock from "../Clock/Clock.jsx";
 import Btn from "../Btn/Btn.jsx";
+import Li from "../Li/Li.jsx";
 
 export default class Add extends Component {
     render(){
-        return( <div>
+        return( <div className="appHeader">
             <App name="Arthur" />
             <App name="Nasty" />
             <Clock  />
             <Btn />
+            <Li arr={['One','Two', 'Three']}/>
           </div>
         )}
 
