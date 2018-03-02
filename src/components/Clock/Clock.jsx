@@ -10,9 +10,13 @@ export default class Clock extends Component{
         };
     }
     componentDidMount(){
-       
-        setInterval(() => this.time(), 3000);
-        setInterval(() => this.nowTime(), 3000);
+        setInterval(() => {
+            this.time();
+        }, 3000);
+        setInterval(() => {
+            this.nowTime();
+        },2000);
+    
     }
     componentWillUnmout(){
         clearInterval(this.timerID);
@@ -26,12 +30,13 @@ export default class Clock extends Component{
         })
     }
     time(){
-        this.setState({ commit: "Time " });
+        this.setState({ commit: "Now time: " });
+        
     }
     render(){
         return <div>
             <h2>
-              {this.state.commit} -  {this.state.date}
+              {this.state.commit}   {this.state.date}
             </h2>
            
           </div>;
