@@ -1,0 +1,19 @@
+.form {
+    display: block;
+    background-color: teal;
+    width: 300px;
+    padding: 20px;
+    text-align: center;  
+   
+}
+.form input, textarea{
+    margin-bottom: 5px;
+    width: 100%;
+    border: none;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgba(213,233,233, 0.5);
+}
+.form input[type=submit]{
+    background-color: rgba(213,243,233, 0.9) ;
+}
