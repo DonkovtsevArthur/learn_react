@@ -20,6 +20,8 @@ export default class Form extends Component {
           value: event.target.value
         });
         break;
+      default:
+        break;
     }
   }
 

@@ -1,0 +1,21 @@
+.temp{
+    margin: 10px;
+    background-color: royalblue;
+    width: 320px;
+    padding: 10px;
+    color: #fff;
+    
+}
+.temp input {
+    width: 100%;
+    box-sizing: border-box;
+    color: blue;
+}
+.temp input[type=submit]{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+.temp input::-webkit-input-placeholder {
+    color: orange;
+}
